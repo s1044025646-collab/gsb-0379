@@ -1,0 +1,21 @@
+{
+  "name": "kalah-backend",
+  "version": "1.0.0",
+  "description": "Kalah 播子棋落子与对面取子回放后端（TypeScript + Node.js + SQLite）",
+  "type": "module",
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "pretest": "tsc -p tsconfig.json",
+    "test": "node --experimental-sqlite --test dist/test/*.test.js",
+    "start": "node --experimental-sqlite dist/src/cli.js serve",
+    "demo": "node --experimental-sqlite dist/src/demo.js",
+    "cli": "node --experimental-sqlite dist/src/cli.js"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
